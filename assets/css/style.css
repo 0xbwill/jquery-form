@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "Interstate";
+  src: URL("/assets/fonts/Interstate\ Mono\ Regular.ttf") format("truetype");
+}
+
+* {
+  font-family: Interstate;
+}
+
+body {
+  background-color: #999a9d;
+}
+
+#container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+/* Form Container (with the colored background) */
+#form-container {
+  color: white;
+  background-color: #38393c;
+  border-radius: 15px;
+  width: 400px;
+  height: 600px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 22px;
+}
+
+form input {
+  padding: 5px;
+  margin: 8px 0;
+}
+/* Form Header 1 (Logo + Phone Number) */
+#header-1 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 20px;
+}
+
+#header-1 img {
+  width: auto;
+  height: 50px;
+  margin-top: 10px;
+}
+
+#header-1 h3 {
+  font-size: 36px;
+  background: -webkit-linear-gradient(
+    rgba(82, 146, 13, 1) 0%,
+    rgba(160, 204, 66, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+}
+
+/* Form Header 2 (Logo + Phone Number) */
+#header-2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  height: 30px;
+  padding: 0px 12px;
+}
+
+#header-2 img {
+  width: auto;
+  height: 50px;
+  margin-top: 10px;
+}
+
+#header-2 h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Demande Container */
+#demande-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+#demande-container select {
+  width: 250px;
+  margin: 10px 0;
+  height: 30px;
+}
+
+/* Besoin Container */
+#besoin-container {
+  display: flex;
+  flex-direction: column;
+}

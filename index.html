@@ -1,14 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="assets/js/jquery-3.6.0.js">
-    <link rel="stylesheet" href="assets/js/script.js">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-</body>
+    <script
+      type="text/javascript"
+      src="http://code.jquery.com/jquery-latest.min.js"
+    ></script>
+    <link rel="stylesheet" href="assets/js/script.js" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="form-container">
+        <div id="header-1">
+          <img src="assets/img/phone.png" alt="" />
+          <h3>03 28 76 55 90</h3>
+        </div>
+        <div id="header-2">
+          <img src="assets/img/mail.png" alt="" />
+          <h2>Un besoin, une demande ?</h2>
+        </div>
+
+        <form action="">
+          <input
+            type="text"
+            name="entreprise"
+            id="entreprise"
+            placeholder="Entreprise *"
+          />
+          <input type="text" name="nom" id="nom" placeholder="Nom *" />
+          <input type="text" name="prenom" id="prenom" placeholder="Prénom *" />
+          <input
+            type="text"
+            name="fonction"
+            id="fonction"
+            placeholder="Fonction"
+          />
+          <input type="text" name="tel" id="tel" placeholder="Tél. *" />
+          <input type="text" name="mail" id="mail" placeholder="Mail *" />
+          <div id="demande-container">
+            <label for="demande">Votre demande concerne *</label>
+            <select name="demande" id="demande"></select>
+          </div>
+          <div id="besoin-container">
+            <label for="demande">Votre besoin (objectifs/date/lieu) *</label>
+            <input type="text" />
+          </div>
+          <h3>GO !</h3>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
