@@ -31,12 +31,12 @@ body {
 form {
   display: flex;
   flex-direction: column;
-  margin: 10px 22px;
+  margin: 5px 22px;
 }
 
 form input {
-  padding: 5px;
-  margin: 8px 0;
+  padding: 0 10px;
+  margin: 7px 0;
 }
 /* Form Header 1 (Logo + Phone Number) */
 #header-1 {
@@ -54,13 +54,10 @@ form input {
 
 #header-1 h3 {
   font-size: 36px;
-  background: -webkit-linear-gradient(
-    rgba(82, 146, 13, 1) 0%,
-    rgba(160, 204, 66, 1) 100%
-  );
+  background: -webkit-linear-gradient(90deg, rgba(82, 146, 13, 1), rgba(160, 204, 66, 1));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin: 0;
+  margin: 0 0 0 5px;
 }
 
 /* Form Header 2 (Logo + Phone Number) */
@@ -80,8 +77,8 @@ form input {
 }
 
 #header-2 h2 {
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 19px;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -95,7 +92,12 @@ form input {
 #demande-container select {
   width: 250px;
   margin: 10px 0;
-  height: 30px;
+  height: 25px;
+  margin: 4px 0 0;
+}
+
+input, select {
+  height: 25px;
 }
 
 /* Besoin Container */
