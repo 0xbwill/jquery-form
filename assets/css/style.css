@@ -15,7 +15,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-top: 150px;
+  margin-top: 8vh;
 }
 
 /* Form Container (with the colored background) */
@@ -24,7 +24,7 @@ body {
   background-color: #38393c;
   border-radius: 15px;
   width: 400px;
-  height: 600px;
+  height: 650px;
 }
 
 /* Form */
@@ -35,21 +35,50 @@ form {
 }
 
 form input {
-  padding: 0 10px;
-  margin: 7px 0;
+  padding: 10px 12px 6px;
+  margin: 5px 0;
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(154, 154, 154));
 }
+
+form select {
+  padding: 5px 8px 0px;
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(154, 154, 154));
+}
+
+form textarea {
+  background-image: linear-gradient(rgb(255, 255, 255), rgb(154, 154, 154));
+  padding: 10px 12px 6px;
+  margin-top: 5px;
+  height: 75px;
+}
+
+/* Form Button */
+form button {
+  border: none;
+  outline: none;
+  font-size: 25px;
+  margin-top: 20px;
+  background: -webkit-linear-gradient(
+    rgba(82, 146, 13, 1) 0%,
+    rgba(160, 204, 66, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 /* Form Header 1 (Logo + Phone Number) */
 #header-1 {
   display: flex;
   align-items: center;
   width: 100%;
   padding: 8px 20px;
+  margin-top: 10px;
 }
 
 #header-1 img {
   width: auto;
   height: 50px;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 #header-1 h3 {
@@ -73,7 +102,7 @@ form input {
 #header-2 img {
   width: auto;
   height: 50px;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 #header-2 h2 {
@@ -91,13 +120,8 @@ form input {
 
 #demande-container select {
   width: 250px;
-  margin: 10px 0;
-  height: 25px;
-  margin: 4px 0 0;
-}
-
-input, select {
-  height: 25px;
+  margin: 5px 0 10px;
+  height: 30px;
 }
 
 /* Besoin Container */

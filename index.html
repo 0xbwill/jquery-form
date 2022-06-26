@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script
-      type="text/javascript"
-      src="http://code.jquery.com/jquery-latest.min.js"
-    ></script>
-    <link rel="stylesheet" href="assets/js/script.js" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="text/javascript" src="assets/js/jquery.js"></script>
+    <script>
+      $().ready(function () {
+        $("#form").validate();
+      });
+    </script>
   </head>
   <body>
     <div id="container">
@@ -24,32 +25,40 @@
           <h2>Un besoin, une demande ?</h2>
         </div>
 
-        <form action="">
+        <form id="form" name="form">
           <input
             type="text"
             name="entreprise"
             id="entreprise"
             placeholder="Entreprise *"
+            required
           />
-          <input type="text" name="nom" id="nom" placeholder="Nom *" />
-          <input type="text" name="prenom" id="prenom" placeholder="Prénom *" />
+          <input type="text" name="nom" id="nom" placeholder="Nom *" required/>
+          <input type="text" name="prenom" id="prenom" placeholder="Prénom *" required/>
           <input
             type="text"
             name="fonction"
             id="fonction"
             placeholder="Fonction"
           />
-          <input type="text" name="tel" id="tel" placeholder="Tél. *" />
-          <input type="text" name="mail" id="mail" placeholder="Mail *" />
+          <input type="phone" name="tel" id="tel" placeholder="Tél. *" required/>
+          <input type="email" name="mail" id="mail" placeholder="Mail *" required/>
           <div id="demande-container">
             <label for="demande">Votre demande concerne *</label>
-            <select name="demande" id="demande"></select>
+            <select name="demande" id="demande" required>
+              <option value="#" default></option>
+              <option value="power">Alimentation</option>
+              <option value="cpu">CPU</option>
+              <option value="ram">RAM</option>
+              <option value="gpu">GPU</option>
+              <option value="cooler">Refroidissement</option>
+            </select>
           </div>
           <div id="besoin-container">
-            <label for="demande">Votre besoin (objectifs/date/lieu) *</label>
-            <input type="text" />
+            <label for="besoin">Votre besoin (objectifs/date/lieu) *</label>
+            <textarea type="text" name="besoin" id="besoin" required></textarea>
           </div>
-          <h3>GO !</h3>
+          <button type="submit">GO !</button>
         </form>
       </div>
     </div>
