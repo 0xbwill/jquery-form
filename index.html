@@ -6,12 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script type="text/javascript" src="assets/js/jquery.js"></script>
-    <script>
-      $().ready(function () {
-        $("#form").validate();
-      });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
   </head>
   <body>
     <div id="container">
@@ -25,7 +21,7 @@
           <h2>Un besoin, une demande ?</h2>
         </div>
 
-        <form id="form" name="form">
+        <form action="mail.php" method="post" id="form" name="form">
           <input
             type="text"
             name="entreprise"
@@ -33,16 +29,34 @@
             placeholder="Entreprise *"
             required
           />
-          <input type="text" name="nom" id="nom" placeholder="Nom *" required/>
-          <input type="text" name="prenom" id="prenom" placeholder="Prénom *" required/>
+          <input type="text" name="nom" id="nom" placeholder="Nom *" required />
+          <input
+            type="text"
+            name="prenom"
+            id="prenom"
+            placeholder="Prénom *"
+            required
+          />
           <input
             type="text"
             name="fonction"
             id="fonction"
             placeholder="Fonction"
           />
-          <input type="phone" name="tel" id="tel" placeholder="Tél. *" required/>
-          <input type="email" name="mail" id="mail" placeholder="Mail *" required/>
+          <input
+            type="text"
+            name="tel"
+            id="tel"
+            placeholder="Tél. *"
+            required
+          />
+          <input
+            type="email"
+            name="mail"
+            id="mail"
+            placeholder="Mail *"
+            required
+          />
           <div id="demande-container">
             <label for="demande">Votre demande concerne *</label>
             <select name="demande" id="demande" required>
@@ -62,5 +76,53 @@
         </form>
       </div>
     </div>
+    <script>
+      // Fonction principale exécutée au chargement de la page, définissant les règles de validation du formulaire
+      $(document).ready(function () {
+        $("#form").validate({
+          rules: {
+            mail: {
+              email: true,
+            },
+            tel: {
+              minlength: 10,
+              maxlength: 10,
+              digits: true,
+            },
+          },
+          // Messages d'erreurs personnalisés pour le form avec JQuery Validate
+          messages: {
+            entreprise: {
+              required: "Veuillez renseigner le nom de votre entreprise.",
+            },
+            nom: {
+              required: "Veuillez renseigner votre nom.",
+            },
+            prenom: {
+              required: "Veuillez renseigner votre prénom.",
+            },
+            tel: {
+              required: "Veuillez renseigner votre numéro de téléphone.",
+              digits: "Veuillez renseigner des chiffres.",
+              minlength:
+                "Veuillez renseigner un numéro de téléphone valide (10 chiffres).",
+              maxlength:
+                "Veuillez renseigner un numéro de téléphone valide (10 chiffres).",
+            },
+            mail: {
+              email: "Veuillez saisir une adresse email valide.",
+              required: "Veuillez renseigner votre adresse email.",
+            },
+            demande: {
+              required:
+                "Veuillez selectionner le sujet concerné par votre demande.",
+            },
+            besoin: {
+              required: "Veuillez nous indiquer votre besoin.",
+            },
+          },
+        });
+      });
+    </script>
   </body>
 </html>

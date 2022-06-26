@@ -1,10 +1,6 @@
-@font-face {
-  font-family: "Interstate";
-  src: URL("/assets/fonts/Interstate\ Mono\ Regular.ttf") format("truetype");
-}
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
-  font-family: Interstate;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -24,7 +20,8 @@ body {
   background-color: #38393c;
   border-radius: 15px;
   width: 400px;
-  height: 650px;
+  height: auto;
+  padding-bottom: 20px;
 }
 
 /* Form */
@@ -128,4 +125,35 @@ form button {
 #besoin-container {
   display: flex;
   flex-direction: column;
+}
+
+/* Confirmation styling */
+.confirm-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #38393c;
+  padding: 15px 35px;
+  border-radius: 15px;
+  margin: 40px auto;
+  width: fit-content;
+  text-align: center;
+  color: white;
+}
+
+.confirm-section h1 {
+  font-size: 30px;
+  background: -webkit-linear-gradient(90deg, rgba(82, 146, 13, 1), rgba(160, 204, 66, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.confirm-section a { 
+  text-decoration: none;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.confirm-section a:hover { 
+  text-decoration: underline;
 }
