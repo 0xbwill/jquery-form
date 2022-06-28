@@ -21,7 +21,7 @@
           <h2>Un besoin, une demande ?</h2>
         </div>
 
-        <form action="mail.php" method="post" id="form" name="form">
+        <form action="mail.php" method="POST" id="form" name="form">
           <input
             type="text"
             name="entreprise"
@@ -60,7 +60,7 @@
           <div id="demande-container">
             <label for="demande">Votre demande concerne *</label>
             <select name="demande" id="demande" required>
-              <option value="#" default></option>
+              <option disabled selected value></option>
               <option value="power">Alimentation</option>
               <option value="cpu">CPU</option>
               <option value="ram">RAM</option>
