@@ -1,7 +1,7 @@
 <?php
-if (!isset($_POST)) {
-    header("location:index.html");
-} else {
+// Vérifie si le formulaire est envoyé
+if (isset($_POST["submit"])) {
+    // Récupération des variables du formulaire
     $entreprise = $_POST['entreprise'];
     $nom = $_POST['nom'];
     $prenom = $_POST['prenom'];
@@ -27,4 +27,9 @@ if (!isset($_POST)) {
 
     // Envoi effectué, redirection vers la page email-sent.php
     header('Location: email-sent.html');
+    exit();
+} elseif (!isset($_POST["submit"])) {
+    // Empêche l'accès direct à cette page si le formulaire n'est pas envoyé
+    header("Location: index.html");
+    exit();
 }
