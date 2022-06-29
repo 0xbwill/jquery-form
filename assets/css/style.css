@@ -157,3 +157,8 @@ form button {
 .confirm-section a:hover { 
   text-decoration: underline;
 }
+
+#submit {
+  font-weight: 900;
+  cursor: pointer;
+}
